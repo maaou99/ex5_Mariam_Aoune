@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Fira+Sans&family=Questrial&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  backdrop-filter: 50px;
+  box-sizing: border-box;
+  border: 0;
+  outline:0;
+  list-style: none;
+  text-decoration: none;
+
+}
+
+@font-face {
+  font-family: "Carmenta";
+  src: url("./assets/Carmenta/Carmenta\ Regular\ 2.00.ttf") format('ttf');
+  src: url("./assets/Carmenta/Carmenta\ Italic\ 2.00.ttf") format('ttf');
+  }
+
+html{
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ae21e63d;
+}
+
+:root{
+    --color-text: #09090B;
+  --color-section: #FDDF01;
+--color-navBar: #F28E13;
+--color-button: #ED3504;
+    --transition: all 400ms ease ;
+ 
+   
+  
+  }
+
+body{
+    width: 100%;
+    padding: 5%;
+    min-height: 100vh;
+    font-family: Questrial; 
+    color: var(--color-text);
+    background-color: #DEDACF;
+  }
+  button {
+    /* Resetting default styles */
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none; /* Remove the default focus outline - be cautious with this for accessibility */
+  }
+
+  a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+    cursor: pointer;
+    position: relative; /* Set cursor to pointer for better interaction */
+    padding-bottom: 5px;
+  }
+
+  a:hover{
+    animation: fillBorder 0.2s linear forwards;
+    color: white;
+  }
+
+  @keyframes fillBorder  {
+    0% {border-bottom:  0px solid #000;
+    }
+    100% {border-bottom: 3px solid #000000;
+     }
+
+  }
+  
+  h2{
+    text-align: center;
+  }
+
+  h2 > p {
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-top: 5px;
+  }
+
+  nav{
+    background-color: var(--color-section); /* Set background color */
+    color: rgb(0, 0, 0); /* Set text color */
+    padding: 2%; /* Add padding for better visibility */
+    position: fixed;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+  z-index: 999;
+    width: fit-content; /* Make it full-width */
+  }
+
+  nav > a {
+    margin:0px 10px ;
+  }
+
+  #proposal, #ui-section, #style{
+    position: relative;
+    padding-top: 5%;
+  }
+
+  #arrows {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 60px;
+    width: 90px; /* Set to 100% to span the entire width of the grid */
+  }
+
+  #style{
+    margin-top: 7%;
+  
+    
+  }
+  
+  #arrows > button > img {
+     /* Adjust the margin between the arrows */
+    padding: 60%;
+  }
+
+  #grid, #Ui {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px; /* Adjust the gap between columns */
+  }
+  
+  #box1 {
+    background-color: var(--color-button); /* Set background color */
+    padding: 20px; /* Add padding for better visibility */
+    height: 180px;
+  }
+  
+  #box2 {
+    background-color: #F28E13; /* Set background color */
+    padding: 20px; /* Add padding for better visibility */
+  }
+
+  #carousel{
+    position: relative;
+    display: flex;
+    align-items: center;
+  
+  }
+ 
+#carousel-img {
+    width: 50%;
+    background-color: #ED3504;
+    margin: 0 auto; /* Center the image horizontally using auto margins */
+    
+    
+}
+
+
+#circles-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #aaa;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.circle.active {
+    background-color: #333;
+}
+
+ 
